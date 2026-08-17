@@ -36,7 +36,12 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 - `GET /health`
 - `POST /api/chat` for chatbot requests
+## Features
 
+- The project now has `Routing` strategy among the agents.
+- At very first there is semantic model `BAAI/bge-small-en-v1.5` trained on two intents read and write.
+- If the result by the classifier is `ambigious` in `intent: ambigious` then there is fallback mechanism where we use an llm to produce the intent feild.
+- Later versions will log those ambigious statements so the model can be improved. 
 ## Configuration
 
 Copy `.env.example` to `.env` and update the values as needed.
