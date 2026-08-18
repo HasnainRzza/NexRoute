@@ -9,4 +9,4 @@ async def read_root():
     return {"message": "Welcome to NexRoute!"}
 
 app.include_router(chat_router.router, prefix="/api")
-app.include_router(intent_router.router, prefix="/api")
+

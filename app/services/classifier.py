@@ -111,6 +111,7 @@ async def classify(query: str, top_k: int = TOP_K):
 
     ranked_intents = sorted(aggregated.items(), key=lambda item: item[1], reverse=True)
     if not ranked_intents:
+        
         return {
             "intent": "ambiguous",
             "confidence": 0.0,
