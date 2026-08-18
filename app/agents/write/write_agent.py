@@ -1,15 +1,5 @@
-import os
-from pathlib import Path
-
-from dotenv import load_dotenv
 from groq import AsyncGroq
-
-BASE_DIR = Path(__file__).resolve().parents[3]
-ENV_FILE = BASE_DIR / ".env"
-load_dotenv(ENV_FILE)
-
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-GROQ_MODEL_NAME = os.getenv("GROQ_MODEL_NAME")
+from settings.settings import GROQ_API_KEY, GROQ_MODEL_NAME
 
 
 async def write_agent(query: str):
