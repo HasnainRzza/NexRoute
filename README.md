@@ -43,6 +43,7 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 - If the result by the classifier is `ambigious` in `intent: ambigious` then there is fallback mechanism where we use an llm to produce the intent feild.
 - Later versions will log those ambigious statements so the model can be improved. 
 - `Read and Write` agents have been configured but for now there is no tool attached to them.
+- The application will be orchestrated over langgraph
 ## Configuration
 
 Copy `.env.example` to `.env` and update the values as needed.
